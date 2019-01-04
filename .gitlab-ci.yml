@@ -30,10 +30,10 @@ test:node:7:
   script:
     - npm test
 
-test:node:4:
-  image: node:4
-  script:
-    - npm test
+# test:node:4:
+#   image: node:4
+#   script:
+#     - npm test
 
 publish:
   stage: deploy

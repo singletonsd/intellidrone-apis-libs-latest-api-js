@@ -1,0 +1,50 @@
+image: node:8
+
+before_script:
+  - npm install
+
+cache:
+  paths:
+    - node_modules/
+
+# test:lint:
+#   script:
+#     - npm run lint
+
+test:vulnerabilities:
+  script:
+    - npm run vuln-test
+
+test:node:6:
+  script:
+    - npm install -g codecov
+    - npm run build
+    - npm test && codecov
+
+test:node:6:
+  image: node:6
+  script:
+    - npm run build
+    - npm test
+
+test:node:7:
+  image: node:7
+  script:
+    - npm run build
+    - npm test
+
+test:node:4:
+  image: node:4
+  script:
+    - npm run build
+    - npm test
+
+publish:
+  stage: deploy
+  only:
+    - tags
+    - triggers
+  script:
+    - npm run build
+    - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
+    - npm publish

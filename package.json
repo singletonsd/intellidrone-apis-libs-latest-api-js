@@ -1,0 +1,37 @@
+{
+  "name": "@singletonar/intellidrone-api-client-js",
+  "version": "1.0.1",
+  "description": "This Intellidrone API client javascript library designed by [Singleton](http://singleton.com.ar). You  can find out more about Swagger at [Singleton Web Page](http://singleton.com.ar) or on [Intellidrone Web Page](http://robotagro.com).",
+  "license": "SEE LICENSE IN LICENSE file",
+  "main": "src//index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --recursive",
+    "vuln-test": "npm audit",
+    "postversion": "git commit -m 'setup a new version' && git push --follow-tags"
+  },
+  "browser": {
+    "fs": false
+  },
+  "homepage": "https://gitlab.com/intelliDrone/api-js-client",
+  "bugs": {
+    "url": "https://gitlab.com/intelliDrone/api-js-client/issues",
+    "email": "patricio.perpetua.arg@gmail.com"
+  },
+  "author": {
+    "name": "Patricio Perpetua",
+    "email": "patricio.perpetua.arg@gmail.com",
+    "url": "http://patricioperpetua.singleton.com.ar"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/intelliDrone/api-js-client.git"
+  },
+  "dependencies": {
+    "superagent": "3.7.0"
+  },
+  "devDependencies": {
+    "expect.js": "~0.3.1",
+    "mocha": "5.2.0",
+    "sinon": "1.17.3"
+  }
+}

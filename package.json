@@ -5,7 +5,7 @@
   "license": "SEE LICENSE IN LICENSE file",
   "main": "src//index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --recursive",
+    "test": "nyc ./node_modules/mocha/bin/mocha --recursive",
     "vuln-test": "npm audit",
     "postversion": "git push --follow-tags"
   },
@@ -32,6 +32,7 @@
   "devDependencies": {
     "expect.js": "~0.3.1",
     "mocha": "5.2.0",
+    "nyc": "13.1.0",
     "sinon": "1.17.3"
   }
 }

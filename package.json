@@ -1,6 +1,6 @@
 {
   "name": "@singletonar/intellidrone-api-client-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This Intellidrone API client javascript library designed by [Singleton](http://singleton.com.ar). You  can find out more about Swagger at [Singleton Web Page](http://singleton.com.ar) or on [Intellidrone Web Page](http://robotagro.com).",
   "license": "SEE LICENSE IN LICENSE file",
   "main": "src//index.js",
